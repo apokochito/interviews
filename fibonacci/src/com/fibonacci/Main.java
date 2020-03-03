@@ -5,13 +5,18 @@ public class Main {
     public static void main(String[] args) {
 
         // A number is the sum of the two previous ones
-        int n1 = 0, n2 = 1, aux;
+        // n0 = 0, n1 = 1
+        // 2..n
+        // nr = n0 + n1
+        // n0 = n1, n1 = nr
 
-        for (int i = 2; i <= 10; ++i) {
-            aux = n1 + n2;
-            System.out.print(" " + aux);
-            n1 = n2;
-            n2 = aux;
+        int n0 = 0, n1 = 1, nr=0;
+
+        for (int counter = 2; counter <= 10; ++counter) {
+            nr = n0 + n1;
+            System.out.println(nr);
+            n0 = n1;
+            n1 = nr;
         }
 
     }
