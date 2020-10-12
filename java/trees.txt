@@ -1,0 +1,79 @@
+/*
+ * Click `Run` to execute the snippet below!
+ */
+import java.io.*;
+import java.util.*;
+
+// Node class
+class Node {
+  
+  int value;
+  Node left;
+  Node right;
+
+  Node(int value) {
+    this.value = value;
+  }
+  
+}
+
+class Solution {
+  
+  public static void main(String[] args) {
+    
+    NodeOperations no = new NodeOperations();
+    
+    no.root = new Node(15);
+    no.root.left = new Node(10);
+    no.root.left.left = new Node(7);
+    no.root.left.right = new Node(13);
+    no.root.left.left.left = new Node(5);
+    no.root.left.left.right = new Node(9);
+    no.root.right = new Node(25);
+    no.root.right.left = new Node(22);
+    no.root.right.right = new Node(27);
+    no.root.right.left.left = new Node(17);
+    
+//          15 
+//         /  \ 
+//        /    \
+//       10    25 
+//      / \    / \ 
+//     7  13  22  27 
+//    / \    / 
+//   5   9  17
+    
+    no.printNodes();
+  }
+  
+}
+
+// NodeOperations class
+class NodeOperations {
+  Node root;
+
+  NodeOperations() {
+    this.root = null;
+  }
+  
+  int puntero = 0;
+
+  void printNodes() {
+    // this.root.value - 15
+    
+    System.out.println("Root node value: " + this.root.value);
+    
+    int nI = this.root.left.left.left.value; // 5
+    
+    
+    
+    
+    System.out.println(nI);
+    
+    System.out.println("Expected result: 5, 7, 9, 10, 13, 15, 17, 22, 25, 27");
+    
+    //*** TODO: Start your code from here ***//
+    
+    
+  }
+}

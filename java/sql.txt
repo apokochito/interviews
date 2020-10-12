@@ -1,0 +1,18 @@
+0.1. Nombre y salario de aquellos empleados cuyo salario es mayor a 10,000
+
+
+SELECT EMP_NAME, SALARY FROM EMPLOYEES WHERE SALARY>10000;
+
+
+
+
+
+
+
+
+
+0.2. Nombre de los empleados que se encuentran en el departamento "Human Resources"
+
+SELECT E.EMP_NAME FROM EMPLOYEES E JOIN DEPARTMENTS D ON E.DEPT_ID = D.DEPT_ID WHERE D.DEPT_NAME="Human Resources";
+
+SELECT E.EMP_NAME FROM EMPLOYEES E, DEPARTMENTS D WHERE E.DEPT_ID = D.DEPT_ID AND D.DEPT_NAME="Human Resources";
